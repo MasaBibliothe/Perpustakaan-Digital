@@ -26,55 +26,72 @@
 
     nav{
       width:100%;
-      background:white;
-      padding:18px 40px;
       display:flex;
-      justify-content:space-between;
+      justify-content:center;
       align-items:center;
-      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      padding:20px;
       position:sticky;
       top:0;
       z-index:999;
-    }
-
-    .logo{
-      font-size:28px;
-      font-weight:bold;
-      color:#ff6f9d;
+      background:transparent;
     }
 
     nav ul{
       display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
       list-style:none;
-      gap:25px;
+      flex-wrap:wrap;
+
+      background:rgba(255,255,255,0.65);
+      backdrop-filter:blur(14px);
+
+      padding:16px 24px;
+      border-radius:50px;
+
+      box-shadow:
+      0 8px 25px rgba(255,111,157,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.7);
+
+      border:1px solid rgba(255,255,255,0.5);
     }
 
     nav ul li a{
       text-decoration:none;
       color:#555;
-      font-weight:500;
-      transition:0.3s;
+      font-size:14px;
+      font-weight:600;
+      padding:10px 18px;
+      border-radius:30px;
+      transition:0.35s;
       position:relative;
+      overflow:hidden;
+      display:block;
     }
 
     nav ul li a:hover{
-      color:#ff6f9d;
+      background:linear-gradient(135deg,#ff8fb1,#ffb6cc);
+      color:white;
+      transform:translateY(-3px) scale(1.03);
+
+      box-shadow:
+      0 6px 15px rgba(255,111,157,0.3);
     }
 
-    nav ul li a::after{
+    nav ul li a::before{
       content:'';
       position:absolute;
-      left:0;
-      bottom:-5px;
-      width:0%;
-      height:3px;
-      background:#ff8fb1;
-      transition:0.3s;
-      border-radius:10px;
+      top:0;
+      left:-100%;
+      width:100%;
+      height:100%;
+      background:rgba(255,255,255,0.3);
+      transition:0.5s;
     }
 
-    nav ul li a:hover::after{
-      width:100%;
+    nav ul li a:hover::before{
+      left:100%;
     }
 
     /* HEADER */
@@ -86,6 +103,7 @@
       color:white;
       border-bottom-left-radius:40px;
       border-bottom-right-radius:40px;
+      margin-top:10px;
     }
 
     header h1{
@@ -198,15 +216,18 @@
     @media(max-width:900px){
 
       nav{
-        flex-direction:column;
-        gap:15px;
-        padding:20px;
+        padding:15px;
       }
 
       nav ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
+        gap:8px;
+        padding:14px 18px;
+        border-radius:30px;
+      }
+
+      nav ul li a{
+        font-size:12px;
+        padding:8px 14px;
       }
 
       header h1{
@@ -225,11 +246,8 @@
 <body>
 
   <!-- NAVIGATION -->
-  <nav>
 
-    <div class="logo">
-      📚 Digital Library
-    </div>
+  <nav>
 
     <ul>
 
@@ -256,23 +274,26 @@
   </nav>
 
   <!-- HEADER -->
+
   <header>
     <h1>Library Agenda</h1>
     <p>Kegiatan Perpustakaan Selama 1 Tahun</p>
   </header>
 
   <!-- TITLE -->
+
   <div class="title">
     <h2>What We Do...</h2>
     <p>Berbagai kegiatan perpustakaan setiap bulan</p>
   </div>
 
   <!-- CONTAINER -->
+
   <div class="container">
 
     <!-- JANUARI -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop">
+      <img src="januari.jpeg">
 
       <div class="content">
 
@@ -293,7 +314,7 @@
 
     <!-- FEBRUARI -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1200&auto=format&fit=crop">
+      <img src="februari.jpeg">
 
       <div class="content">
 
@@ -314,7 +335,7 @@
 
     <!-- MARET -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+      <img src="maret.jpeg">
 
       <div class="content">
 
@@ -332,10 +353,10 @@
 
       </div>
     </div>
-    
+
     <!-- APRIL -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1200&auto=format&fit=crop">
+      <img src="april.jpeg">
 
       <div class="content">
 
@@ -356,7 +377,7 @@
 
     <!-- MEI -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop">
+      <img src="mei.jpeg">
 
       <div class="content">
 
@@ -377,7 +398,7 @@
 
     <!-- JUNI -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop">
+      <img src="juni.jpeg">
 
       <div class="content">
 
@@ -395,10 +416,10 @@
 
       </div>
     </div>
-    
+
     <!-- JULI -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop">
+      <img src="juli.jpeg">
 
       <div class="content">
 
@@ -419,7 +440,7 @@
 
     <!-- AGUSTUS -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200&auto=format&fit=crop">
+      <img src="agustus.jpeg">
 
       <div class="content">
 
@@ -440,7 +461,7 @@
 
     <!-- SEPTEMBER -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop">
+      <img src="september.jpeg">
 
       <div class="content">
 
@@ -458,10 +479,10 @@
 
       </div>
     </div>
-    
+
     <!-- OKTOBER -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop">
+      <img src="oktober.jpeg">
 
       <div class="content">
 
@@ -474,7 +495,7 @@
 
         <div class="activity">
           <h3>📚 Reading Challenge</h3>
-          <p>Tantangan membaca buku untuk meningkatkan minat  baca.</p>
+          <p>Tantangan membaca buku untuk meningkatkan minat baca.</p>
         </div>
 
       </div>
@@ -482,7 +503,7 @@
 
     <!-- NOVEMBER -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop">
+      <img src="november.jpeg">
 
       <div class="content">
 
@@ -503,7 +524,7 @@
 
     <!-- DESEMBER -->
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop">
+      <img src="desember.jpeg">
 
       <div class="content">
 
@@ -511,21 +532,21 @@
 
         <div class="activity">
           <h3>🎉 Evaluasi Akhir Tahun</h3>
-          <p>meninjau seluruh kegiatan perpustakaan selama satu tahun.</p>
+          <p>Meninjau seluruh kegiatan perpustakaan selama satu tahun.</p>
         </div>
 
         <div class="activity">
-          <h3>🎁 apresiasi Pengunjung</h3>
+          <h3>🎁 Apresiasi Pengunjung</h3>
           <p>Pemberian penghargaan kepada pengunjung aktif perpustakaan.</p>
         </div>
 
       </div>
     </div>
-    
 
   </div>
 
   <!-- FOOTER -->
+
   <footer>
     ©️ 2026 Digital Library | Library Activities
   </footer>
