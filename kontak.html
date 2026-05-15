@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kontak Kami</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
 
     *{
@@ -17,13 +20,75 @@
     body{
       background: linear-gradient(135deg, #ffe3ec, #fff6fa);
       min-height:100vh;
-      padding:40px 20px;
       color:#444;
     }
+
+    /* NAVIGATION */
+
+    nav{
+      width:100%;
+      background:rgba(255,255,255,0.95);
+      backdrop-filter:blur(10px);
+      padding:18px 35px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      box-shadow:0 4px 18px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    nav ul{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+      list-style:none;
+      gap:15px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#555;
+      font-size:14px;
+      font-weight:600;
+      padding:10px 16px;
+      border-radius:14px;
+      transition:0.3s;
+      position:relative;
+      display:block;
+    }
+
+    nav ul li a:hover{
+      background:#ffe3ec;
+      color:#ff5c8a;
+      transform:translateY(-2px);
+    }
+
+    nav ul li a::after{
+      content:'';
+      position:absolute;
+      left:50%;
+      bottom:6px;
+      width:0%;
+      height:3px;
+      background:#ff8fb1;
+      border-radius:10px;
+      transition:0.3s;
+      transform:translateX(-50%);
+    }
+
+    nav ul li a:hover::after{
+      width:55%;
+    }
+
+    /* CONTENT */
 
     .container{
       max-width:1200px;
       margin:auto;
+      padding:40px 20px;
     }
 
     .title{
@@ -141,10 +206,24 @@
       height:350px;
       border:none;
       border-radius:20px;
-      pointer-events:auto;
     }
 
+    /* RESPONSIVE */
+
     @media(max-width:900px){
+
+      nav{
+        padding:20px;
+      }
+
+      nav ul{
+        gap:10px;
+      }
+
+      nav ul li a{
+        font-size:12px;
+        padding:8px 12px;
+      }
 
       .contact-wrapper{
         grid-template-columns:1fr;
@@ -162,83 +241,129 @@
 
   </style>
 </head>
+
 <body>
 
-<div class="container">
+  <!-- NAVIGATION -->
 
-  <div class="title">
-    <h1>💌 Kontak Kami</h1>
-    <p>Hubungi kami untuk mendapatkan informasi lebih lanjut</p>
-  </div>
+  <nav>
 
-  <div class="contact-wrapper">
+    <ul>
 
-    <!-- Informasi Kontak -->
-    <div class="card">
+      <li><a href="index.html">Home</a></li>
 
-      <h2>Informasi Kontak</h2>
+      <li><a href="profil.html">Profile</a></li>
 
-      <div class="info-item">
-        <h3>📍 Alamat</h3>
-        <p>
-          Jl. Dr. Antonius Suroyo, Tembalang, Kec. Tembalang,
-          Kota Semarang, Jawa Tengah 50275
-        </p>
+      <li><a href="katalog.html">Katalog</a></li>
+
+      <li><a href="layanan.html">Layanan</a></li>
+
+      <li><a href="koleksi.html">Koleksi</a></li>
+
+      <li><a href="panduan.html">Panduan/FAQ</a></li>
+
+      <li><a href="agenda.html">Agenda/Kegiatan</a></li>
+
+      <li><a href="berita.html">Berita/Pengumuman</a></li>
+
+      <li><a href="kontak.html">Kontak</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- CONTENT -->
+
+  <div class="container">
+
+    <div class="title">
+
+      <h1>💌 Kontak Kami</h1>
+
+      <p>Hubungi kami untuk mendapatkan informasi lebih lanjut</p>
+
+    </div>
+
+    <div class="contact-wrapper">
+
+      <!-- INFORMASI KONTAK -->
+
+      <div class="card">
+
+        <h2>Informasi Kontak</h2>
+
+        <div class="info-item">
+
+          <h3>📍 Alamat</h3>
+
+          <p>
+            Jl. Dr. Antonius Suroyo, Tembalang, Kec. Tembalang,
+            Kota Semarang, Jawa Tengah 50275
+          </p>
+
+        </div>
+
+        <div class="info-item">
+
+          <h3>📞 Nomor Telepon</h3>
+
+          <p>(024) 76480619</p>
+
+        </div>
+
+        <div class="info-item">
+
+          <h3>✉️ Email</h3>
+
+          <p>masabibli99@gmail.com</p>
+
+        </div>
+
       </div>
 
-      <div class="info-item">
-        <h3>📞 Nomor Telepon</h3>
-        <p>(024) 76480619</p>
-      </div>
+      <!-- FORMULIR -->
 
-      <div class="info-item">
-        <h3>✉️ Email</h3>
-        <p>ib@undip.ac.id</p>
+      <div class="card contact-form">
+
+        <h2>Feedback</h2>
+
+        <form>
+
+          <input type="text" placeholder="Nama Lengkap">
+
+          <input type="email" placeholder="Email">
+
+          <input type="text" placeholder="Subjek">
+
+          <textarea rows="6" placeholder="Tulis pesan Anda..."></textarea>
+
+          <button type="submit">Kirim Pesan</button>
+
+        </form>
+
       </div>
 
     </div>
 
-    <!-- Formulir Kontak -->
-    <div class="card contact-form">
+    <!-- MAP -->
 
-      <h2>Formulir Kontak</h2>
+    <div class="map-card">
 
-      <form>
+      <h2>📌 Lokasi Kami</h2>
 
-        <input type="text" placeholder="Nama Lengkap">
+      <div class="map-wrapper">
 
-        <input type="email" placeholder="Email">
+        <iframe
+          src="https://www.google.com/maps?q=FIB+UNDIP&output=embed"
+          allowfullscreen=""
+          loading="lazy">
+        </iframe>
 
-        <input type="text" placeholder="Subjek">
-
-        <textarea rows="6" placeholder="Tulis pesan Anda..."></textarea>
-
-        <button type="submit">Kirim Pesan</button>
-
-      </form>
+      </div>
 
     </div>
 
   </div>
-
-  <!-- Google Maps -->
-  <div class="map-card">
-
-    <h2>📌 Lokasi Kami</h2>
-
-    <div class="map-wrapper">
-
-      <iframe
-        src="https://www.google.com/maps?q=FIB+UNDIP&output=embed"
-        allowfullscreen=""
-        loading="lazy">
-      </iframe>
-
-    </div>
-
-  </div>
-
-</div>
 
 </body>
 </html>
