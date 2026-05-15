@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Buku - The Four Agreements</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f4ea;
+    color:#222;
+    padding:30px;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+}
+
+.back{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:black;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.share{
+    font-size:2rem;
+    cursor:pointer;
+}
+
+.detail-container{
+    max-width:1100px;
+    margin:auto;
+    background:#fffdf8;
+    padding:40px;
+    border-radius:30px;
+    border:3px solid #b58b5b;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.book-section{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+.book-cover img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.book-info h1{
+    font-size:3.2rem;
+    margin-bottom:10px;
+    color:#5d5d4d;
+}
+
+.author{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.category{
+    display:inline-block;
+    background:#f4e2cc;
+    color:#5d5d4d;
+    padding:10px 28px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.rating{
+    font-size:2rem;
+    margin-bottom:35px;
+}
+
+.rating span{
+    color:#ffbb00;
+}
+
+.meta{
+    display:flex;
+    gap:40px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.meta-item{
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+.sinopsis h2{
+    font-size:2.3rem;
+    margin-bottom:20px;
+    color:#7a834f;
+}
+
+.sinopsis p{
+    line-height:2;
+    text-align:justify;
+    margin-bottom:20px;
+    color:#444;
+}
+
+.condition{
+    margin-top:40px;
+}
+
+.condition h2{
+    font-size:2.3rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.tags{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.tags span{
+    background:#f9ead8;
+    padding:15px 30px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+.buttons{
+    display:flex;
+    gap:25px;
+    margin-top:50px;
+}
+
+.read-btn{
+    padding:18px 45px;
+    border-radius:40px;
+    background:white;
+    border:3px solid #5d5d4d;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.read-btn:hover{
+    background:#f1ece2;
+}
+
+.borrow-btn{
+    padding:18px 60px;
+    border-radius:40px;
+    background:#b58b5b;
+    color:white;
+    border:none;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.borrow-btn:hover{
+    background:#9e7448;
+}
+
+@media(max-width:900px){
+
+    .book-section{
+        grid-template-columns:1fr;
+    }
+
+    .book-cover{
+        max-width:350px;
+        margin:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top">
+
+    <a href="katalog.html" class="back">
+        ← Detail Buku
+    </a>
+
+    <div class="share">
+        ⤴
+    </div>
+
+</div>
+
+<div class="detail-container">
+
+    <div class="book-section">
+
+        <div class="book-cover">
+            <img src="agreements.jpg" alt="The Four Agreements">
+        </div>
+
+        <div class="book-info">
+
+            <h1>The Four Agreements</h1>
+
+            <div class="author">
+                Don Miguel Ruiz
+            </div>
+
+            <div class="category">
+                Self Improvement • Spiritual
+            </div>
+
+            <div class="rating">
+                <span>★★★★★</span> 4,8 (2,6K)
+            </div>
+
+            <div class="meta">
+                <div class="meta-item">📄 PDF</div>
+                <div class="meta-item">📚 160 hlm</div>
+                <div class="meta-item">🌐 Bahasa Indonesia</div>
+            </div>
+
+            <div class="sinopsis">
+
+                <h2>Sinopsis</h2>
+
+                <p>
+                    The Four Agreements adalah buku pengembangan diri yang memperkenalkan empat prinsip
+                    sederhana untuk menjalani hidup dengan lebih damai, bebas, dan bahagia.
+                </p>
+
+                <p>
+                    Don Miguel Ruiz menjelaskan bahwa banyak penderitaan manusia berasal dari keyakinan
+                    dan kebiasaan berpikir yang terbentuk sejak kecil. Melalui empat kesepakatan utama,
+                    pembaca diajak untuk lebih sadar dalam berbicara, bertindak, dan menilai diri sendiri.
+                </p>
+
+                <p>
+                    Buku ini cocok untuk pembaca yang ingin memperbaiki pola pikir, mengurangi tekanan batin,
+                    dan membangun kehidupan yang lebih ringan serta bermakna.
+                </p>
+
+            </div>
+
+            <div class="condition">
+
+                <h2>Cocok untuk kondisi</h2>
+
+                <div class="tags">
+                    <span>🌿 Inner Peace</span>
+                    <span>🧘 Self Awareness</span>
+                    <span>✨ Healing</span>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="read-btn">
+                    Baca Sekarang
+                </button>
+
+                <button class="borrow-btn">
+                    Pinjam
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

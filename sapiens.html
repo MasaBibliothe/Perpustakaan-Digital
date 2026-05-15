@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Buku - Sapiens</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f4ea;
+    color:#222;
+    padding:30px;
+}
+
+/* HEADER */
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+}
+
+.back{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:black;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.share{
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* DETAIL */
+
+.detail-container{
+    max-width:1100px;
+    margin:auto;
+    background:#fffdf8;
+    padding:40px;
+    border-radius:30px;
+    border:3px solid #d2a679;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.book-section{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+.book-cover img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.book-info h1{
+    font-size:3.2rem;
+    margin-bottom:10px;
+    color:#5d5d4d;
+}
+
+.author{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.category{
+    display:inline-block;
+    background:#f3e0cf;
+    color:#5d5d4d;
+    padding:10px 28px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.rating{
+    font-size:2rem;
+    margin-bottom:35px;
+}
+
+.rating span{
+    color:#ffbb00;
+}
+
+.meta{
+    display:flex;
+    gap:40px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.meta-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+.sinopsis h2{
+    font-size:2.3rem;
+    margin-bottom:20px;
+    color:#7a834f;
+}
+
+.sinopsis p{
+    line-height:2;
+    text-align:justify;
+    margin-bottom:20px;
+    color:#444;
+}
+
+/* TAGS */
+
+.condition{
+    margin-top:40px;
+}
+
+.condition h2{
+    font-size:2.3rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.tags{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.tags span{
+    background:#f7eadf;
+    padding:15px 30px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+/* BUTTON */
+
+.buttons{
+    display:flex;
+    gap:25px;
+    margin-top:50px;
+}
+
+.read-btn{
+    padding:18px 45px;
+    border-radius:40px;
+    background:white;
+    border:3px solid #5d5d4d;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.read-btn:hover{
+    background:#f1ece2;
+}
+
+.borrow-btn{
+    padding:18px 60px;
+    border-radius:40px;
+    background:#d2a679;
+    color:white;
+    border:none;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.borrow-btn:hover{
+    background:#bb8b5c;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .book-section{
+        grid-template-columns:1fr;
+    }
+
+    .book-cover{
+        max-width:350px;
+        margin:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="top">
+
+    <a href="katalog.html" class="back">
+        ← Detail Buku
+    </a>
+
+    <div class="share">
+        ⤴
+    </div>
+
+</div>
+
+<!-- DETAIL -->
+
+<div class="detail-container">
+
+    <div class="book-section">
+
+        <!-- COVER -->
+
+        <div class="book-cover">
+            <img src="sapiens.jpg" alt="Sapiens">
+        </div>
+
+        <!-- INFO -->
+
+        <div class="book-info">
+
+            <h1>Sapiens</h1>
+
+            <div class="author">
+                Yuval Noah Harari
+            </div>
+
+            <div class="category">
+                History • Science
+            </div>
+
+            <div class="rating">
+                <span>★★★★★</span> 4,8 (2,7K)
+            </div>
+
+            <!-- META -->
+
+            <div class="meta">
+
+                <div class="meta-item">
+                    📄 PDF
+                </div>
+
+                <div class="meta-item">
+                    📚 512 hlm
+                </div>
+
+                <div class="meta-item">
+                    🌐 Bahasa Indonesia
+                </div>
+
+            </div>
+
+            <!-- SINOPSIS -->
+
+            <div class="sinopsis">
+
+                <h2>Sinopsis</h2>
+
+                <p>
+                    Sapiens membahas perjalanan panjang manusia dari zaman purba hingga menjadi
+                    spesies paling dominan di dunia. Yuval Noah Harari menjelaskan bagaimana
+                    Homo sapiens berkembang melalui revolusi kognitif, pertanian, hingga teknologi modern.
+                </p>
+
+                <p>
+                    Buku ini mengupas bagaimana manusia menciptakan agama, uang, kerajaan,
+                    ilmu pengetahuan, dan sistem sosial yang membentuk dunia saat ini.
+                    Dengan gaya penulisan yang menarik, pembaca diajak memahami sejarah manusia
+                    dari sudut pandang yang berbeda.
+                </p>
+
+                <p>
+                    Sapiens menjadi salah satu buku nonfiksi populer karena mampu menggabungkan
+                    sejarah, sains, filsafat, dan budaya menjadi pembahasan yang mendalam namun tetap mudah dipahami.
+                </p>
+
+            </div>
+
+            <!-- TAG -->
+
+            <div class="condition">
+
+                <h2>Cocok untuk kondisi</h2>
+
+                <div class="tags">
+                    <span>🧠 Deep Thinking</span>
+                    <span>🌍 Knowledge</span>
+                    <span>📚 Insightful</span>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <div class="buttons">
+
+                <button class="read-btn">
+                    Baca Sekarang
+                </button>
+
+                <button class="borrow-btn">
+                    Pinjam
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

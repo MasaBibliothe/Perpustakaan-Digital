@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Buku - Becoming</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f4ea;
+    color:#222;
+    padding:30px;
+}
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+}
+
+.back{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:black;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.share{
+    font-size:2rem;
+    cursor:pointer;
+}
+
+.detail-container{
+    max-width:1100px;
+    margin:auto;
+    background:#fffdf8;
+    padding:40px;
+    border-radius:30px;
+    border:3px solid #d99ac5;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.book-section{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+.book-cover img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.book-info h1{
+    font-size:3.2rem;
+    margin-bottom:10px;
+    color:#5d5d4d;
+}
+
+.author{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.category{
+    display:inline-block;
+    background:#ffe2f4;
+    color:#5d5d4d;
+    padding:10px 28px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.rating{
+    font-size:2rem;
+    margin-bottom:35px;
+}
+
+.rating span{
+    color:#ffbb00;
+}
+
+.meta{
+    display:flex;
+    gap:40px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.meta-item{
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+.sinopsis h2{
+    font-size:2.3rem;
+    margin-bottom:20px;
+    color:#7a834f;
+}
+
+.sinopsis p{
+    line-height:2;
+    text-align:justify;
+    margin-bottom:20px;
+    color:#444;
+}
+
+.condition{
+    margin-top:40px;
+}
+
+.condition h2{
+    font-size:2.3rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.tags{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.tags span{
+    background:#fff0fa;
+    padding:15px 30px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+.buttons{
+    display:flex;
+    gap:25px;
+    margin-top:50px;
+}
+
+.read-btn{
+    padding:18px 45px;
+    border-radius:40px;
+    background:white;
+    border:3px solid #5d5d4d;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.read-btn:hover{
+    background:#f1ece2;
+}
+
+.borrow-btn{
+    padding:18px 60px;
+    border-radius:40px;
+    background:#d99ac5;
+    color:white;
+    border:none;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.borrow-btn:hover{
+    background:#c57bb0;
+}
+
+@media(max-width:900px){
+
+    .book-section{
+        grid-template-columns:1fr;
+    }
+
+    .book-cover{
+        max-width:350px;
+        margin:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="top">
+
+    <a href="katalog.html" class="back">
+        ← Detail Buku
+    </a>
+
+    <div class="share">
+        ⤴
+    </div>
+
+</div>
+
+<div class="detail-container">
+
+    <div class="book-section">
+
+        <div class="book-cover">
+            <img src="becoming.jpg" alt="Becoming">
+        </div>
+
+        <div class="book-info">
+
+            <h1>Becoming</h1>
+
+            <div class="author">
+                Michelle Obama
+            </div>
+
+            <div class="category">
+                Memoir • Biography
+            </div>
+
+            <div class="rating">
+                <span>★★★★★</span> 4,9 (3,2K)
+            </div>
+
+            <div class="meta">
+
+                <div class="meta-item">
+                    📄 PDF
+                </div>
+
+                <div class="meta-item">
+                    📚 448 hlm
+                </div>
+
+                <div class="meta-item">
+                    🌐 Bahasa Indonesia
+                </div>
+
+            </div>
+
+            <div class="sinopsis">
+
+                <h2>Sinopsis</h2>
+
+                <p>
+                    Becoming adalah kisah hidup Michelle Obama yang menceritakan perjalanan dirinya
+                    dari masa kecil di Chicago hingga menjadi First Lady Amerika Serikat.
+                </p>
+
+                <p>
+                    Dengan gaya penulisan yang hangat dan jujur, Michelle membagikan pengalaman tentang
+                    pendidikan, keluarga, karier, hingga kehidupannya bersama Barack Obama di Gedung Putih.
+                </p>
+
+                <p>
+                    Buku ini menggambarkan perjuangan, keberanian, dan pentingnya tetap menjadi diri sendiri
+                    di tengah tekanan hidup. Becoming menjadi salah satu memoir paling inspiratif dan populer di dunia.
+                </p>
+
+            </div>
+
+            <div class="condition">
+
+                <h2>Cocok untuk kondisi</h2>
+
+                <div class="tags">
+                    <span>✨ Inspiratif</span>
+                    <span>💪 Empowerment</span>
+                    <span>📖 Self Growth</span>
+                </div>
+
+            </div>
+
+            <div class="buttons">
+
+                <button class="read-btn">
+                    Baca Sekarang
+                </button>
+
+                <button class="borrow-btn">
+                    Pinjam
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

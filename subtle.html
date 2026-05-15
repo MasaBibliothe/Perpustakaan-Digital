@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Detail Buku - The Subtle Art of Not Giving a F*ck</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#f8f4ea;
+    color:#222;
+    padding:30px;
+}
+
+/* HEADER */
+
+.top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+}
+
+.back{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    text-decoration:none;
+    color:black;
+    font-size:2rem;
+    font-weight:700;
+}
+
+.share{
+    font-size:2rem;
+    cursor:pointer;
+}
+
+/* DETAIL */
+
+.detail-container{
+    max-width:1100px;
+    margin:auto;
+    background:#fffdf8;
+    padding:40px;
+    border-radius:30px;
+    border:3px solid #ff7b54;
+    box-shadow:0 10px 20px rgba(0,0,0,.05);
+}
+
+.book-section{
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:50px;
+    align-items:start;
+}
+
+.book-cover img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.book-info h1{
+    font-size:3.2rem;
+    margin-bottom:10px;
+    color:#5d5d4d;
+}
+
+.author{
+    font-size:2rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.category{
+    display:inline-block;
+    background:#ffe2d8;
+    color:#5d5d4d;
+    padding:10px 28px;
+    border-radius:30px;
+    font-weight:600;
+    margin-bottom:20px;
+}
+
+.rating{
+    font-size:2rem;
+    margin-bottom:35px;
+}
+
+.rating span{
+    color:#ffbb00;
+}
+
+.meta{
+    display:flex;
+    gap:40px;
+    margin-bottom:50px;
+    flex-wrap:wrap;
+}
+
+.meta-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+.sinopsis h2{
+    font-size:2.3rem;
+    margin-bottom:20px;
+    color:#7a834f;
+}
+
+.sinopsis p{
+    line-height:2;
+    text-align:justify;
+    margin-bottom:20px;
+    color:#444;
+}
+
+/* TAGS */
+
+.condition{
+    margin-top:40px;
+}
+
+.condition h2{
+    font-size:2.3rem;
+    margin-bottom:25px;
+    color:#7a834f;
+}
+
+.tags{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.tags span{
+    background:#fff0eb;
+    padding:15px 30px;
+    border-radius:20px;
+    font-weight:600;
+    font-size:1.2rem;
+    color:#5d5d4d;
+}
+
+/* BUTTON */
+
+.buttons{
+    display:flex;
+    gap:25px;
+    margin-top:50px;
+}
+
+.read-btn{
+    padding:18px 45px;
+    border-radius:40px;
+    background:white;
+    border:3px solid #5d5d4d;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.read-btn:hover{
+    background:#f1ece2;
+}
+
+.borrow-btn{
+    padding:18px 60px;
+    border-radius:40px;
+    background:#ff7b54;
+    color:white;
+    border:none;
+    font-size:1.3rem;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.borrow-btn:hover{
+    background:#ff6233;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:900px){
+
+    .book-section{
+        grid-template-columns:1fr;
+    }
+
+    .book-cover{
+        max-width:350px;
+        margin:auto;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<div class="top">
+
+    <a href="katalog.html" class="back">
+        ← Detail Buku
+    </a>
+
+    <div class="share">
+        ⤴
+    </div>
+
+</div>
+
+<!-- DETAIL -->
+
+<div class="detail-container">
+
+    <div class="book-section">
+
+        <!-- COVER -->
+
+        <div class="book-cover">
+            <img src="subtle.jpg" alt="The Subtle Art of Not Giving a F*ck">
+        </div>
+
+        <!-- INFO -->
+
+        <div class="book-info">
+
+            <h1>The Subtle Art of Not Giving a F*ck</h1>
+
+            <div class="author">
+                Mark Manson
+            </div>
+
+            <div class="category">
+                Self Improvement • Psychology
+            </div>
+
+            <div class="rating">
+                <span>★★★★★</span> 4,7 (2,5K)
+            </div>
+
+            <!-- META -->
+
+            <div class="meta">
+
+                <div class="meta-item">
+                    📄 PDF
+                </div>
+
+                <div class="meta-item">
+                    📚 246 hlm
+                </div>
+
+                <div class="meta-item">
+                    🌐 Bahasa Indonesia
+                </div>
+
+            </div>
+
+            <!-- SINOPSIS -->
+
+            <div class="sinopsis">
+
+                <h2>Sinopsis</h2>
+
+                <p>
+                    The Subtle Art of Not Giving a F*ck membahas cara menjalani hidup dengan lebih realistis
+                    dan tidak terlalu memikirkan hal-hal yang sebenarnya tidak penting.
+                </p>
+
+                <p>
+                    Melalui gaya penulisan yang santai, jujur, dan penuh humor, Mark Manson mengajak pembaca
+                    untuk menerima kegagalan, rasa sakit, dan ketidaksempurnaan sebagai bagian alami dari kehidupan.
+                </p>
+
+                <p>
+                    Buku ini menekankan bahwa kebahagiaan bukan berasal dari hidup yang sempurna,
+                    melainkan dari kemampuan memilih hal-hal yang benar-benar layak untuk dipedulikan.
+                    Cocok untuk pembaca yang sedang mencari perspektif baru tentang hidup dan self growth.
+                </p>
+
+            </div>
+
+            <!-- TAG -->
+
+            <div class="condition">
+
+                <h2>Cocok untuk kondisi</h2>
+
+                <div class="tags">
+                    <span>🧠 Overthinking</span>
+                    <span>🔥 Self Growth</span>
+                    <span>😌 Healing</span>
+                </div>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <div class="buttons">
+
+                <button class="read-btn">
+                    Baca Sekarang
+                </button>
+
+                <button class="borrow-btn">
+                    Pinjam
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
