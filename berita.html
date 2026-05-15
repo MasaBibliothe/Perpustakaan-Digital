@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berita & Pengumuman Perpustakaan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #ffe3ec, #fff6fa);
+      min-height:100vh;
+    }
+
+    /* NAVIGATION */
+
+    nav{
+      width:100%;
+      background:white;
+      padding:15px 30px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:18px;
+      box-shadow:0 4px 15px rgba(0,0,0,0.08);
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:12px;
+    }
+
+    .logo img{
+      width:50px;
+    }
+
+    .logo h1{
+      font-size:28px;
+      color:#ff5c8a;
+      font-weight:700;
+    }
+
+    nav ul{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+      list-style:none;
+      gap:14px;
+      padding:0;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#555;
+      font-size:14px;
+      font-weight:600;
+      padding:10px 16px;
+      border-radius:14px;
+      transition:0.3s;
+      display:block;
+    }
+
+    nav ul li a:hover{
+      background:#ffe3ec;
+      color:#ff5c8a;
+      transform:translateY(-2px);
+    }
+
+    /* CONTENT */
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:40px 20px;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:50px;
+    }
+
+    .title h1{
+      font-size:48px;
+      color:#ff5c8a;
+      margin-bottom:10px;
+      font-weight:700;
+    }
+
+    .title p{
+      color:#777;
+      font-size:18px;
+    }
+
+    .news-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
+      gap:30px;
+    }
+
+    .news-card{
+      background:white;
+      border-radius:25px;
+      overflow:hidden;
+      box-shadow:0 8px 25px rgba(255,92,138,0.15);
+      transition:0.3s;
+    }
+
+    .news-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .news-card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    .news-content{
+      padding:25px;
+    }
+
+    .news-date{
+      font-size:14px;
+      color:#ff7aa5;
+      margin-bottom:10px;
+      font-weight:bold;
+    }
+
+    .news-content h2{
+      font-size:24px;
+      color:#ff5c8a;
+      margin-bottom:15px;
+    }
+
+    .news-content p{
+      color:#666;
+      line-height:1.7;
+      margin-bottom:20px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:12px 20px;
+      background:linear-gradient(135deg,#ff7aa5,#ff5c8a);
+      color:white;
+      border:none;
+      border-radius:15px;
+      cursor:pointer;
+      transition:0.3s;
+      font-weight:bold;
+      font-size:15px;
+    }
+
+    .btn:hover{
+      transform:scale(1.05);
+      box-shadow:0 5px 15px rgba(255,92,138,0.3);
+    }
+
+    /* MODAL */
+
+    .modal{
+      display:none;
+      position:fixed;
+      z-index:999;
+      left:0;
+      top:0;
+      width:100%;
+      height:100%;
+      background:rgba(0,0,0,0.5);
+    }
+
+    .modal-content{
+      background:white;
+      width:80%;
+      max-width:650px;
+      margin:8% auto;
+      padding:30px;
+      border-radius:25px;
+      position:relative;
+      animation:muncul 0.3s ease;
+    }
+
+    .modal-content h2{
+      color:#ff5c8a;
+      margin-bottom:15px;
+    }
+
+    .modal-content p{
+      line-height:1.9;
+      color:#555;
+      text-align:justify;
+    }
+
+    .close{
+      position:absolute;
+      right:20px;
+      top:15px;
+      font-size:30px;
+      cursor:pointer;
+      color:#ff5c8a;
+    }
+
+    @keyframes muncul{
+
+      from{
+        transform:scale(0.8);
+        opacity:0;
+      }
+
+      to{
+        transform:scale(1);
+        opacity:1;
+      }
+
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:768px){
+
+      .title h1{
+        font-size:38px;
+      }
+
+      .modal-content{
+        width:90%;
+      }
+
+      .logo h1{
+        font-size:22px;
+      }
+
+      nav ul{
+        gap:8px;
+      }
+
+      nav ul li a{
+        font-size:12px;
+        padding:8px 10px;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+
+
+    <ul>
+
+      <li><a href="home.html">Home</a></li>
+
+      <li><a href="profil.html">Profile</a></li>
+
+      <li><a href="katalog.html">Katalog</a></li>
+
+      <li><a href="layanan.html">Layanan</a></li>
+
+      <li><a href="koleksi.html">Koleksi</a></li>
+
+      <li><a href="panduan.html">Panduan/FAQ</a></li>
+
+      <li><a href="agenda.html">Agenda/Kegiatan</a></li>
+
+      <li><a href="berita.html">Berita/Pengumuman</a></li>
+
+      <li><a href="kontak.html">Kontak</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- CONTENT -->
+
+  <div class="container">
+
+    <div class="title">
+
+      <h1>📢 Berita & Pengumuman</h1>
+
+      <p>Informasi kegiatan dan pengumuman terbaru perpustakaan</p>
+
+    </div>
+
+    <div class="news-container">
+
+      <!-- CARD 1 -->
+
+      <div class="news-card">
+
+        <img src="workshopliterasi.jpeg">
+
+        <div class="news-content">
+
+          <div class="news-date">
+            1 Juni 2026
+          </div>
+
+          <h2>Workshop Literasi Informasi</h2>
+
+          <p>
+            Perpustakaan mengadakan workshop literasi informasi bagi mahasiswa.
+          </p>
+
+          <button class="btn"
+          onclick="openModal(
+          'Workshop Literasi Informasi',
+          'Workshop literasi informasi merupakan kegiatan pelatihan yang bertujuan membantu mahasiswa memahami cara mencari, mengevaluasi, dan menggunakan informasi secara efektif. Kegiatan ini memberikan pemahaman mengenai penggunaan sumber informasi terpercaya, teknik pencarian jurnal akademik, serta etika penggunaan informasi di era digital.'
+          )">
+          Baca Selengkapnya
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 2 -->
+
+      <div class="news-card">
+
+        <img src="donasibuku.jpeg">
+
+        <div class="news-content">
+
+          <div class="news-date">
+            15 Juni 2026
+          </div>
+
+          <h2>Program Donasi Buku</h2>
+
+          <p>
+            Program donasi buku untuk mahasiswa dan dosen.
+          </p>
+
+          <button class="btn"
+          onclick="openModal(
+          'Program Donasi Buku',
+          'Program donasi buku bertujuan menambah koleksi perpustakaan dan meningkatkan budaya membaca di lingkungan kampus. Buku yang didonasikan dapat berupa buku akademik maupun non akademik yang masih layak baca sehingga dapat dimanfaatkan oleh seluruh pengunjung perpustakaan.'
+          )">
+          Baca Selengkapnya
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 3 -->
+
+      <div class="news-card">
+
+        <img src="JAM.jpeg">
+
+        <div class="news-content">
+
+          <div class="news-date">
+            20 Juni 2026
+          </div>
+
+          <h2>Perubahan Jam Operasional</h2>
+
+          <p>
+            Jam operasional perpustakaan diperpanjang selama ujian semester.
+          </p>
+
+          <button class="btn"
+          onclick="openModal(
+          'Perubahan Jam Operasional',
+          'Selama masa ujian semester, perpustakaan memperpanjang jam layanan hingga pukul 21.00 WIB agar mahasiswa dapat belajar dan mengakses koleksi lebih lama. Kebijakan ini bertujuan mendukung kebutuhan belajar mahasiswa selama persiapan ujian.'
+          )">
+          Baca Selengkapnya
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 4 -->
+
+      <div class="news-card">
+
+        <img src="pelatihanperpus.jpeg">
+
+        <div class="news-content">
+
+          <div class="news-date">
+            25 Juli 2026
+          </div>
+
+          <h2>Pelatihan Perpustakaan Digital</h2>
+
+          <p>
+            Pelatihan penggunaan e-book dan jurnal digital.
+          </p>
+
+          <button class="btn"
+          onclick="openModal(
+          'Pelatihan Perpustakaan Digital',
+          'Pelatihan perpustakaan digital membantu mahasiswa memahami cara mengakses e-book, e-journal, repository kampus, serta database ilmiah. Kegiatan ini bertujuan meningkatkan kemampuan literasi digital agar proses pencarian informasi menjadi lebih efektif.'
+          )">
+          Baca Selengkapnya
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 5 -->
+
+      <div class="news-card">
+
+        <img src="lombacerpen.jpeg">
+
+        <div class="news-content">
+
+          <div class="news-date">
+            11 Agustus 2026
+          </div>
+
+          <h2>Lomba Menulis Cerpen</h2>
+
+          <p>
+            Lomba menulis cerpen untuk meningkatkan kreativitas mahasiswa.
+          </p>
+
+          <button class="btn"
+          onclick="openModal(
+          'Lomba Menulis Cerpen',
+          'Lomba menulis cerpen merupakan kegiatan literasi yang bertujuan mengembangkan kreativitas dan keterampilan menulis mahasiswa. Peserta diberikan kesempatan untuk menuangkan ide serta pengalaman dalam bentuk karya tulis yang menarik dan edukatif.'
+          )">
+          Baca Selengkapnya
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- CARD 6 -->
+
+      <div class="news-card">
+
+        <img src="seminarliterasi.jpeg">
+
+        <div class="news-content">
+
+          <div class="news-date">
+            13 Agustus 2026
+          </div>
+
+          <h2>Seminar Nasional Literasi</h2>
+
+          <p>
+            Seminar mengenai perkembangan literasi digital modern.
+          </p>
+
+          <button class="btn"
+          onclick="openModal(
+          'Seminar Nasional Literasi',
+          'Seminar nasional literasi membahas perkembangan literasi informasi dan literasi digital di era modern. Kegiatan ini menghadirkan narasumber profesional untuk memberikan wawasan mengenai penggunaan informasi secara bijak dan bertanggung jawab.'
+          )">
+          Baca Selengkapnya
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- MODAL -->
+
+  <div id="modalBerita" class="modal">
+
+    <div class="modal-content">
+
+      <span class="close">&times;</span>
+
+      <h2 id="modalTitle"></h2>
+
+      <p id="modalText"></p>
+
+    </div>
+
+  </div>
+
+  <script>
+
+    const modal = document.getElementById("modalBerita");
+    const closeBtn = document.querySelector(".close");
+
+    function openModal(judul, isi){
+
+      document.getElementById("modalTitle").innerText = judul;
+      document.getElementById("modalText").innerText = isi;
+
+      modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function(){
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event){
+
+      if(event.target == modal){
+        modal.style.display = "none";
+      }
+
+    }
+
+  </script>
+
+</body>
+</html>
