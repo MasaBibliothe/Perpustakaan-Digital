@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Journal | MASA BIBLIOTHÉ</title>
+
+<style>
+body{
+font-family:Poppins,sans-serif;
+background:#f8f4ea;
+margin:0;
+padding:40px;
+}
+
+h1{
+text-align:center;
+color:#e7584b;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.content{
+padding:20px;
+}
+
+.content h3{
+color:#7a834f;
+margin-bottom:10px;
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#ff8db0;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1> E-Journal Collection</h1>
+
+<div class="cards">
+
+<div class="card">
+<img id="imgE-JournalCollection" src="tools.jpg">
+
+<div class="content">
+<h3>Journal Tools</h3>
+<p>Alat bantu penelusuran jurnal penelitian meliputi scopus, science direct, sage, emerald</p>
+
+<button onclick="window.open('https://garuda.kemdikbud.go.id/')">
+Read Journal
+</button>
+</div>
+</div>
+
+<div class="card">
+<img id="imgE-JournalCollection" src="skripsithesis.jpg">
+
+<div class="content">
+<h3>Skripsi dan Thesis</h3>
+<p>Kumpulan skripsi dan thesis serta penelitian akademik.</p>
+
+<button onclick="window.open('https://doaj.org/')">
+Open PDF
+</button>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

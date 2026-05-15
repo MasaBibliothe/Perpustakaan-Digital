@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podcast | MASA BIBLIOTHÉ</title>
+
+<style>
+body{
+font-family:Poppins,sans-serif;
+background:#f8f4ea;
+margin:0;
+padding:40px;
+}
+
+h1{
+text-align:center;
+color:#e7584b;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.content{
+padding:20px;
+}
+
+.content h3{
+color:#7a834f;
+margin-bottom:10px;
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#ff8db0;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Podcast Collection</h1>
+
+<div class="cards">
+
+<div class="card">
+<img id="imgPodcastCollection" src="booktalk.jpg">
+
+<div class="content">
+<h3>Book Talk Podcast</h3>
+<p>Podcast diskusi buku dan review bacaan populer.</p>
+
+<button onclick="window.open('https://www.youtube.com/results?search_query=book+talk+podcast')">
+Listen Podcast
+</button>
+</div>
+</div>
+
+<div class="card">
+<img id="imgPodcastCollection" src="study.jpg">
+
+<div class="content">
+<h3>Study Podcast</h3>
+<p>Podcast belajar dan motivasi akademik mahasiswa.</p>
+
+<button onclick="window.open('https://www.youtube.com/results?search_query=study+podcast')">
+Play Now
+</button>
+</div>
+</div>
+
+<div class="card">
+<img id="imgPodcastCollection" src="daily.jpg">
+
+<div class="content">
+<h3>Daily Life Podcast</h3>
+<p>Pembahasan podcast para motivator mengenai kehidupan.</p>
+
+<button onclick="window.open('https://www.youtube.com/results?search_query=digital+literacy+podcast')">
+Open Podcast
+</button>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>

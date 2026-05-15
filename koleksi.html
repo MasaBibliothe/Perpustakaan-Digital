@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MASA BIBLIOTHÉ | Koleksi</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f8f4ea;
+color:#5b5b4b;
+overflow-x:hidden;
+}
+
+/* HEADER */
+header{
+background:linear-gradient(135deg,#ff8db0,#ffc2d3);
+padding:45px 20px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+header h1{
+font-family:'Gaegu',cursive;
+font-size:4rem;
+color:white;
+letter-spacing:2px;
+}
+
+header p{
+margin-top:10px;
+font-size:1rem;
+color:white;
+}
+
+/* NAVIGATION */
+.main-nav{
+position:sticky;
+top:0;
+z-index:999;
+background:white;
+padding:20px 40px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.main-nav ul{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:18px;
+flex-wrap:wrap;
+list-style:none;
+}
+
+.main-nav ul li a{
+text-decoration:none;
+padding:12px 22px;
+border-radius:50px;
+font-weight:600;
+color:#7a834f;
+transition:.3s;
+background:#fff5f8;
+}
+
+.main-nav ul li a:hover{
+background:#ff8db0;
+color:white;
+transform:translateY(-3px);
+}
+
+/* CATEGORY MENU */
+.nav-menu{
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+padding:30px;
+background:#fff0f4;
+}
+
+.nav-menu a{
+text-decoration:none;
+padding:14px 28px;
+background:white;
+border-radius:50px;
+color:#7a834f;
+font-weight:600;
+transition:.3s;
+box-shadow:0 5px 15px rgba(0,0,0,.06);
+}
+
+.nav-menu a:hover{
+background:#ff8db0;
+color:white;
+transform:translateY(-5px);
+}
+
+/* SECTION */
+.section{
+padding:90px 70px;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:55px;
+}
+
+.section-title h2{
+font-family:'Gaegu',cursive;
+font-size:4rem;
+color:#7a834f;
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
+}
+
+.card{
+background:white;
+border-radius:30px;
+overflow:hidden;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+transition:.4s;
+cursor:pointer;
+position:relative;
+}
+
+.card:hover{
+transform:translateY(-12px) scale(1.02);
+box-shadow:0 18px 40px rgba(0,0,0,.15);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+transition:.5s;
+}
+
+.card:hover img{
+transform:scale(1.05);
+}
+
+.card-content{
+padding:25px;
+}
+
+.card-content h3{
+font-family:'Gaegu',cursive;
+font-size:2rem;
+margin-bottom:12px;
+color:#e7584b;
+}
+
+.card-content p{
+font-size:.95rem;
+line-height:1.8;
+color:#666;
+}
+
+/* UPLOAD BUTTON */
+.upload-label{
+display:inline-block;
+margin-top:18px;
+padding:12px 22px;
+background:#ff8db0;
+color:white;
+border-radius:50px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 5px 15px rgba(255,141,176,.3);
+}
+
+.upload-label:hover{
+background:#e86b95;
+transform:translateY(-3px);
+}
+
+.upload-input{
+display:none;
+}
+
+/* FOOTER */
+footer{
+margin-top:70px;
+background:#c7d6e6;
+padding:45px;
+text-align:center;
+color:white;
+font-weight:500;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+header h1{
+font-size:3rem;
+}
+
+.section{
+padding:60px 25px;
+}
+
+.main-nav{
+padding:18px;
+}
+
+.main-nav ul{
+gap:10px;
+}
+
+.main-nav ul li a{
+padding:10px 16px;
+font-size:.9rem;
+}
+
+.nav-menu{
+padding:20px;
+gap:12px;
+}
+
+.nav-menu a{
+padding:10px 18px;
+font-size:.9rem;
+}
+
+.section-title h2{
+font-size:3rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+<h1>MASA BIBLIOTHÉ</h1>
+<p>Explore Collection, Find Your Passion!!</p>
+</header>
+
+<!-- NAVIGATION -->
+<nav class="main-nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="profil.html">Profile</a></li>
+<li><a href="katalog.html">Katalog</a></li>
+<li><a href="layanan.html">Layanan</a></li>
+<li><a href="koleksi.html">Koleksi</a></li>
+<li><a href="panduan.html">Panduan</a></li>
+<li><a href="agenda.html">Agenda</a></li>
+<li><a href="berita.html">Berita</a></li>
+<li><a href="kontak.html">Kontak</a></li>
+</ul>
+</nav>
+
+<!-- CATEGORY -->
+<div class="nav-menu">
+<a href="#books">Books</a>
+<a href="#digital">Digital</a>
+<a href="#budaya">Budaya Indonesia</a>
+</div>
+
+<!-- BOOKS -->
+<section class="section" id="books">
+
+<div class="section-title">
+<h2>Books Collection</h2>
+</div>
+
+<div class="cards">
+
+<!-- NOVEL -->
+<div class="card">
+
+<img id="imgNovel" src="novel.jpg">
+
+<div class="card-content">
+<h3>Novel Collection</h3>
+
+<p>
+Kumpulan novel romance, fantasy, mystery, dan literature modern.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='novel.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+<!-- ACADEMIC -->
+<div class="card">
+
+<img id="imgAcademic" src="akademik.jpg">
+
+<div class="card-content">
+<h3>Academic Books</h3>
+
+<p>
+Buku pembelajaran akademik, penelitian, dan pendidikan kampus.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='academic.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+<!-- ENSIKLOPEDIA -->
+<div class="card">
+
+<img id="imgEnsiklopedia" src="ensiklopedia.jpg">
+
+<div class="card-content">
+<h3>Ensiklopedia</h3>
+
+<p>
+Koleksi ensiklopedia pengetahuan umum, sejarah, dan sains.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='ensiklopedia.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- DIGITAL -->
+<section class="section" id="digital">
+
+<div class="section-title">
+<h2>Digital Collection</h2>
+</div>
+
+<div class="cards">
+
+<!-- PODCAST -->
+<div class="card">
+
+<img id="imgPodcast" src="podcast.jpg">
+
+<div class="card-content">
+<h3>Podcast</h3>
+
+<p>
+Podcast edukasi, diary life, dan book talk modern.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='podcast.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+<!-- EBOOK -->
+<div class="card">
+
+<img id="imgEbook" src="ebook.jpg">
+
+<div class="card-content">
+<h3>E-Book</h3>
+
+<p>
+Koleksi buku digital online yang mudah diakses di berbagai perangkat.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='ebook.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+<!-- EJOURNAL -->
+<div class="card">
+
+<img id="imgEjournal" src="ejournal.jpg">
+
+<div class="card-content">
+<h3>E-Journal</h3>
+
+<p>
+Jurnal nasional dan internasional dalam format digital PDF.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='ejournal.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- BUDAYA -->
+<section class="section" id="budaya">
+
+<div class="section-title">
+<h2>Budaya Indonesia</h2>
+</div>
+
+<div class="cards">
+
+<!-- BUDAYA -->
+<div class="card">
+
+<img id="imgBudaya" src="budaya.jpg">
+
+<div class="card-content">
+<h3>Budaya Tradisional</h3>
+
+<p>
+Koleksi budaya tradisional Indonesia seperti tari dan pakaian adat.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='budaya.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+<!-- MANUSKRIP -->
+<div class="card">
+
+<img id="imgManuskrip" src="manuskrip.jpg">
+
+<div class="card-content">
+<h3>Manuskrip Kuno</h3>
+
+<p>
+Dokumen kuno, naskah sejarah, dan manuskrip digital nusantara.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='manuskrip.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+<!-- SEJARAH -->
+<div class="card">
+
+<img id="imgSejarah" src="sejarah.jpg">
+
+<div class="card-content">
+<h3>Sejarah Indonesia</h3>
+
+<p>
+Koleksi sejarah perjuangan, kerajaan nusantara, dan arsip Indonesia.
+</p>
+
+<button class="collection-btn"
+onclick="window.location.href='sejarah.html'">
+Lihat Koleksi
+</button>
+
+</div>
+</div>
+
+</div>
+</section>
+
+<style>
+
+/* BUTTON LIHAT KOLEKSI */
+.collection-btn{
+margin-top:18px;
+padding:12px 24px;
+border:none;
+border-radius:50px;
+background:linear-gradient(135deg,#ff8db0,#ffb6c9);
+color:white;
+font-weight:600;
+font-size:.95rem;
+cursor:pointer;
+transition:.3s;
+box-shadow:0 5px 15px rgba(255,141,176,.3);
+}
+
+.collection-btn:hover{
+transform:translateY(-4px);
+background:linear-gradient(135deg,#e86b95,#ff8db0);
+box-shadow:0 10px 20px rgba(255,141,176,.4);
+}
+
+</style>

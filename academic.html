@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academic Books | MASA BIBLIOTHÉ</title>
+
+<style>
+body{
+font-family:Poppins,sans-serif;
+background:#f8f4ea;
+margin:0;
+padding:40px;
+}
+
+h1{
+text-align:center;
+color:#e7584b;
+margin-bottom:50px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:320px;
+object-fit:cover;
+}
+
+.content{
+padding:20px;
+}
+
+.content h3{
+color:#7a834f;
+}
+
+button{
+margin-top:15px;
+padding:10px 20px;
+border:none;
+background:#ff8db0;
+color:white;
+border-radius:10px;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Academic</h1>
+
+<div class="cards">
+
+<div class="card">
+<img id="imgAcademicCollection" src="mathscience.jpg">
+
+<div class="content">
+<h3>Science and Mathematic</h3>
+<p>Buku tentang ilmu pengetahuan alam.</p>
+<button>Open Book</button>
+</div>
+</div>
+
+<div class="card">
+<img id="imgAcademicCollection" src="humanities.jpg">
+
+<div class="content">
+<h3>Humaniora</h3>
+<p>Buku tentang ilmu yang berkaitan dengan kehidupan sosial.</p>
+<button>Read More</button>
+</div>
+</div>
+
+<div class="card">
+<img id="imgAcademicCollection" src="engineer.jpg">
+
+<div class="content">
+<h3>Engineer</h3>
+<p>Pembelajaran mengenai ilmu di rumpun teknik.</p>
+<button>Explore</button>
+</div>
+</div>
+
+</div>
+
+</body>
+</html>
