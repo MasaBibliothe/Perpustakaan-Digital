@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MASA BIBLIOTHÉ - Profil Perpustakaan</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins', sans-serif;
+background:#f8e6de;
+overflow-x:hidden;
+color:#6b5d58;
+}
+
+/* BACKGROUND */
+body::before{
+content:"";
+position:fixed;
+inset:0;
+
+background:
+linear-gradient(rgba(255,255,255,.6),rgba(255,255,255,.6)),
+url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1600&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+z-index:-2;
+filter:blur(2px);
+}
+
+/* CONTAINER */
+.container{
+width:88%;
+max-width:1300px;
+margin:auto;
+background:#fffaf4;
+box-shadow:0 0 25px rgba(0,0,0,.08);
+}
+
+/* HEADER */
+header{
+padding:90px 50px 140px;
+
+background:
+linear-gradient(rgba(255,240,245,.45),rgba(255,240,245,.45)),
+url('https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1400&auto=format&fit=crop');
+
+background-size:cover;
+background-position:center;
+
+text-align:center;
+position:relative;
+overflow:hidden;
+}
+
+header::after{
+content:"";
+position:absolute;
+bottom:-120px;
+left:-5%;
+width:110%;
+height:250px;
+background:#fffaf4;
+border-radius:50%;
+}
+
+/* JUDUL */
+header h1{
+font-family:'Gaegu', cursive;
+font-size:5rem;
+
+color:white;
+
+text-shadow:
+3px 3px 0 rgba(0,0,0,.15),
+0 0 20px rgba(0,0,0,.15);
+
+position:relative;
+z-index:2;
+}
+
+/* SUBTITLE */
+header p{
+font-size:1.1rem;
+margin-top:28px;
+
+position:relative;
+z-index:2;
+
+color:white;
+
+text-shadow:
+1px 1px 10px rgba(0,0,0,.25);
+}
+
+/* NAVBAR */
+nav{
+padding:40px 30px;
+
+background:
+linear-gradient(
+90deg,
+#ffd9e5,
+#dfe9ff,
+#fff0b8
+);
+
+border-top:4px dashed #ffffff;
+border-bottom:4px dashed #ffffff;
+}
+
+/* BIKIN NAV RAPI */
+nav ul{
+list-style:none;
+
+display:flex;
+justify-content:center;
+align-items:center;
+flex-wrap:wrap;
+
+gap:22px; /* JARAK ANTAR MENU */
+padding:0;
+margin:0;
+}
+
+/* ITEM */
+nav li{
+display:flex;
+}
+
+/* LINK */
+nav a{
+text-decoration:none;
+
+background:white;
+color:#c86b85;
+
+padding:15px 24px;
+
+font-size:.95rem;
+font-weight:600;
+
+border-radius:20px;
+
+border:3px solid #dfe9ff;
+
+box-shadow:0 5px 12px rgba(0,0,0,.07);
+
+transition:.3s;
+}
+
+/* WARNA SELANG SELING */
+nav li:nth-child(odd) a{
+border-color:#ffd978;
+}
+
+nav li:nth-child(even) a{
+border-color:#ffb3c7;
+}
+
+/* HOVER */
+nav a:hover{
+transform:translateY(-5px) rotate(-2deg);
+
+background:#c86b85;
+color:white;
+}
+
+/* SECTION */
+.profil-container{
+padding:100px 60px;
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:35px;
+
+background:
+repeating-linear-gradient(
+90deg,
+#ffc1d5,
+#ffc1d5 50px,
+#ffcadb 50px,
+#ffcadb 100px
+);
+}
+
+/* CARD */
+.profil-card{
+background:#fff8f1;
+padding:30px;
+border-radius:30px;
+border:4px solid #ffd978;
+
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+
+transform:rotate(-1deg);
+}
+
+.profil-card:nth-child(2){
+transform:rotate(1deg);
+}
+
+.profil-card:nth-child(3){
+transform:rotate(-2deg);
+}
+
+.profil-card h2{
+font-family:'Gaegu', cursive;
+font-size:2.5rem;
+color:#ff8fb1;
+margin-bottom:20px;
+}
+
+.profil-card p{
+line-height:2;
+font-size:.97rem;
+}
+
+/* BUTTON */
+.button-area{
+background:#dfe9ff;
+padding:70px;
+text-align:center;
+}
+
+.back-button{
+padding:16px 35px;
+border:none;
+border-radius:50px;
+
+background:#c86b85;
+color:white;
+
+font-size:1rem;
+font-weight:bold;
+cursor:pointer;
+
+box-shadow:0 5px 15px rgba(200,107,133,.3);
+transition:.3s;
+}
+
+.back-button:hover{
+transform:translateY(-3px);
+}
+
+/* FOOTER */
+footer{
+background:
+linear-gradient(
+90deg,
+#d8d7ff,
+#ffdbe6,
+#fff0b8
+);
+
+padding:70px;
+text-align:center;
+color:white;
+}
+
+footer p{
+font-size:1rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:1000px){
+
+.profil-container{
+grid-template-columns:1fr;
+padding:80px 30px;
+}
+
+header h1{
+font-size:3.8rem;
+}
+
+nav{
+padding:25px 15px;
+}
+
+nav ul{
+gap:15px;
+}
+
+nav a{
+padding:13px 18px;
+font-size:.9rem;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- HEADER -->
+<header>
+
+<h1>Profil Perpustakaan MASA BIBLIOTHÉ 📚</h1>
+
+<p>
+Kenali lebih dalam tentang kami, visi, misi, dan struktur organisasi.
+</p>
+
+</header>
+
+<!-- NAVIGASI -->
+<nav>
+
+<ul>
+<li><a href="home.html">Home</a></li>
+<li><a href="profil.html">Profile</a></li>
+<li><a href="katalog.html">Katalog</a></li>
+<li><a href="layanan.html">Layanan</a></li>
+<li><a href="koleksi.html">Koleksi</a></li>
+<li><a href="panduan.html">Panduan/FAQ</a></li>
+<li><a href="agenda.html">Agenda/Kegiatan</a></li>
+<li><a href="berita.html">Berita/Pengumuman</a></li>
+<li><a href="kontak.html">Kontak</a></li>
+</ul>
+
+</nav>
+
+<!-- PROFIL -->
+<section id="tentang-kami" class="profil-container">
+
+<div class="profil-card">
+
+<h2>Tentang Kami / Sejarah</h2>
+
+<p>
+Perpustakaan MASA BIBLIOTHÉ didirikan dengan tujuan untuk menyediakan akses literasi yang lebih luas kepada masyarakat. Kami memiliki koleksi buku, jurnal, dan e-book dari berbagai disiplin ilmu, serta menawarkan layanan berbasis digital untuk memudahkan pengunjung.
+</p>
+
+<br>
+
+<p>
+Nama <strong>MASA</strong> merupakan singkatan dari inisial nama para pencipta perpustakaan ini sebagai simbol kolaborasi, kreativitas, dan semangat dalam membangun ruang literasi modern.
+</p>
+
+<br>
+
+<p>
+Sementara itu, <strong>BIBLIOTHÉ</strong> terinspirasi dari kata dalam bahasa Latin dan Prancis kuno yang berkaitan dengan perpustakaan serta kumpulan buku, menggambarkan tempat yang menjadi pusat ilmu pengetahuan, imajinasi, dan pembelajaran bagi semua kalangan.
+</p>
+
+</div>
+
+<div class="profil-card" id="visi-misi">
+
+<h2>Visi & Misi</h2>
+
+<p>
+<strong>Visi:</strong> Menjadi perpustakaan digital terdepan yang memfasilitasi akses informasi dan literasi untuk masyarakat luas.
+</p>
+
+<br>
+
+<p>
+<strong>Misi:</strong> 
+1. Menyediakan layanan perpustakaan berbasis digital.<br>
+2. Meningkatkan literasi masyarakat dengan berbagai program edukasi.<br>
+3. Mengoptimalkan teknologi untuk kemudahan akses buku dan jurnal.
+</p>
+
+</div>
+
+<div class="profil-card" id="struktur-organisasi">
+
+<h2>Struktur Organisasi</h2>
+
+<p>
+Struktur organisasi Perpustakaan MASA BIBLIOTHÉ terdiri dari beberapa bagian yang memiliki peran dan tanggung jawab masing-masing untuk mendukung kelancaran layanan perpustakaan. Setiap divisi bekerja sama dalam menciptakan lingkungan literasi yang nyaman, modern, dan mudah diakses oleh seluruh pengunjung.
+</p>
+
+<br>
+
+<p>
+
+<strong>• Kepala Perpustakaan</strong><br>
+Bertanggung jawab dalam memimpin, mengelola, serta menentukan kebijakan dan pengembangan layanan perpustakaan agar dapat berjalan dengan baik dan terorganisir.
+
+<br><br>
+
+<strong>• Pustakawan</strong><br>
+Bertugas mengelola koleksi bahan pustaka, melakukan pengolahan buku, serta memberikan pelayanan informasi dan bantuan kepada pengunjung perpustakaan.
+
+<br><br>
+
+<strong>• Divisi IT</strong><br>
+Berperan dalam mengelola sistem digital dan teknologi informasi perpustakaan, seperti katalog online, layanan e-book, serta pemeliharaan website dan sistem perpustakaan digital.
+
+</p>
+
+</div>
+
+</section>
+
+<div class="button-area">
+
+<button class="back-button"
+onclick="window.location.href='index.html'">
+
+Kembali ke Halaman Utama
+
+</button>
+
+</div>
+
+<footer>
+
+<p>
+© 2026 MASA BIBLIOTHÉ | Buku adalah jendela dunia! 🌍
+</p>
+
+</footer>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kontak Kami</title>
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background: linear-gradient(135deg, #ffe3ec, #fff6fa);
+      min-height:100vh;
+      padding:40px 20px;
+      color:#444;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+    }
+
+    .title{
+      text-align:center;
+      margin-bottom:40px;
+    }
+
+    .title h1{
+      font-size:46px;
+      color:#ff5c8a;
+      margin-bottom:10px;
+    }
+
+    .title p{
+      color:#777;
+      font-size:17px;
+    }
+
+    .contact-wrapper{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      margin-bottom:40px;
+    }
+
+    .card{
+      background: rgba(255,255,255,0.9);
+      border-radius:25px;
+      padding:35px;
+      box-shadow:0 8px 25px rgba(255, 105, 180, 0.15);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h2{
+      color:#ff5c8a;
+      margin-bottom:25px;
+      font-size:28px;
+    }
+
+    .info-item{
+      margin-bottom:25px;
+    }
+
+    .info-item h3{
+      color:#ff7aa5;
+      margin-bottom:8px;
+      font-size:20px;
+    }
+
+    .info-item p{
+      line-height:1.7;
+      color:#555;
+    }
+
+    .contact-form input,
+    .contact-form textarea{
+      width:100%;
+      padding:15px;
+      margin-bottom:18px;
+      border:none;
+      border-radius:15px;
+      background:#fff7fa;
+      box-shadow:0 2px 8px rgba(0,0,0,0.05);
+      outline:none;
+      font-size:15px;
+    }
+
+    .contact-form textarea{
+      resize:none;
+    }
+
+    .contact-form button{
+      width:100%;
+      padding:15px;
+      border:none;
+      border-radius:15px;
+      background: linear-gradient(135deg, #ff7aa5, #ff5c8a);
+      color:white;
+      font-size:16px;
+      font-weight:bold;
+      cursor:pointer;
+      transition:0.3s;
+    }
+
+    .contact-form button:hover{
+      transform:scale(1.02);
+      box-shadow:0 5px 15px rgba(255,92,138,0.3);
+    }
+
+    .map-card{
+      background: rgba(255,255,255,0.9);
+      border-radius:25px;
+      padding:25px;
+      box-shadow:0 8px 25px rgba(255, 105, 180, 0.15);
+      text-align:center;
+    }
+
+    .map-card h2{
+      color:#ff5c8a;
+      margin-bottom:20px;
+      font-size:30px;
+    }
+
+    .map-wrapper{
+      width:85%;
+      margin:auto;
+    }
+
+    iframe{
+      width:100%;
+      height:350px;
+      border:none;
+      border-radius:20px;
+      pointer-events:auto;
+    }
+
+    @media(max-width:900px){
+
+      .contact-wrapper{
+        grid-template-columns:1fr;
+      }
+
+      .title h1{
+        font-size:38px;
+      }
+
+      .map-wrapper{
+        width:100%;
+      }
+
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="title">
+    <h1>💌 Kontak Kami</h1>
+    <p>Hubungi kami untuk mendapatkan informasi lebih lanjut</p>
+  </div>
+
+  <div class="contact-wrapper">
+
+    <!-- Informasi Kontak -->
+    <div class="card">
+
+      <h2>Informasi Kontak</h2>
+
+      <div class="info-item">
+        <h3>📍 Alamat</h3>
+        <p>
+          Jl. Dr. Antonius Suroyo, Tembalang, Kec. Tembalang,
+          Kota Semarang, Jawa Tengah 50275
+        </p>
+      </div>
+
+      <div class="info-item">
+        <h3>📞 Nomor Telepon</h3>
+        <p>(024) 76480619</p>
+      </div>
+
+      <div class="info-item">
+        <h3>✉️ Email</h3>
+        <p>ib@undip.ac.id</p>
+      </div>
+
+    </div>
+
+    <!-- Formulir Kontak -->
+    <div class="card contact-form">
+
+      <h2>Formulir Kontak</h2>
+
+      <form>
+
+        <input type="text" placeholder="Nama Lengkap">
+
+        <input type="email" placeholder="Email">
+
+        <input type="text" placeholder="Subjek">
+
+        <textarea rows="6" placeholder="Tulis pesan Anda..."></textarea>
+
+        <button type="submit">Kirim Pesan</button>
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <!-- Google Maps -->
+  <div class="map-card">
+
+    <h2>📌 Lokasi Kami</h2>
+
+    <div class="map-wrapper">
+
+      <iframe
+        src="https://www.google.com/maps?q=FIB+UNDIP&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>

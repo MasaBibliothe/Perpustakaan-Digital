@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Library Agenda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:'Poppins', sans-serif;
+    }
+
+    body{
+      background:#fff6f0;
+    }
+
+    /* HEADER */
+    header{
+      background:linear-gradient(135deg,#ff8fb1,#ffc7d9);
+      padding:80px 20px;
+      text-align:center;
+      color:white;
+      border-bottom-left-radius:40px;
+      border-bottom-right-radius:40px;
+    }
+
+    header h1{
+      font-size:65px;
+      margin-bottom:10px;
+    }
+
+    header p{
+      font-size:20px;
+      opacity:0.9;
+    }
+
+    /* TITLE */
+    .title{
+      text-align:center;
+      margin:60px 20px 40px;
+    }
+
+    .title h2{
+      font-size:55px;
+      color:#ff8fb1;
+      font-family:cursive;
+    }
+
+    .title p{
+      color:#777;
+      margin-top:10px;
+    }
+
+    /* CONTAINER */
+    .container{
+      width:90%;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:35px;
+      padding-bottom:70px;
+    }
+
+    /* CARD */
+    .card{
+      background:white;
+      border-radius:30px;
+      overflow:hidden;
+      box-shadow:0 8px 20px rgba(0,0,0,0.08);
+      transition:0.4s;
+      position:relative;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+    }
+
+    /* IMAGE */
+    .card img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+    }
+
+    /* CONTENT */
+    .content{
+      padding:25px;
+    }
+
+    .month{
+      font-size:35px;
+      color:#8f7b45;
+      margin-bottom:20px;
+    }
+
+    .activity{
+      background:#fff4f7;
+      border-left:5px solid #ff8fb1;
+      padding:15px;
+      border-radius:15px;
+      margin-bottom:15px;
+    }
+
+    .activity h3{
+      color:#ff6f9d;
+      margin-bottom:5px;
+      font-size:19px;
+    }
+
+    .activity p{
+      color:#555;
+      font-size:14px;
+      line-height:1.7;
+    }
+
+    /* FOOTER */
+    footer{
+      background:#ff8fb1;
+      color:white;
+      text-align:center;
+      padding:25px;
+      font-size:15px;
+      margin-top:20px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+
+
+  <!-- HEADER -->
+  <header>
+    <h1>Library Agenda</h1>
+    <p>Kegiatan Perpustakaan Selama 1 Tahun</p>
+  </header>
+
+  <!-- TITLE -->
+  <div class="title">
+    <h2>What We Do...</h2>
+    <p>Berbagai kegiatan perpustakaan setiap bulan</p>
+  </div>
+
+  <!-- CONTAINER -->
+  <div class="container">
+
+    <!-- JANUARI -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1521587760476-6c12a4b040da?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Januari</h2>
+
+        <div class="activity">
+          <h3>📚 Rapat Awal Tahun</h3>
+          <p>Menyusun agenda dan program kerja perpustakaan selama satu tahun.</p>
+        </div>
+
+        <div class="activity">
+          <h3>🗂 Pendataan Koleksi</h3>
+          <p>Mengecek jumlah dan kondisi buku perpustakaan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FEBRUARI -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Februari</h2>
+
+        <div class="activity">
+          <h3>💡 Literasi Informasi</h3>
+          <p>Pelatihan penggunaan informasi dan pencarian sumber terpercaya.</p>
+        </div>
+
+        <div class="activity">
+          <h3>🏆 Resensi Buku</h3>
+          <p>Lomba untuk meningkatkan minat baca pengunjung.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARET -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Maret</h2>
+
+        <div class="activity">
+          <h3>💻 Seminar Digital</h3>
+          <p>Pengenalan layanan perpustakaan digital dan e-book.</p>
+        </div>
+
+        <div class="activity">
+          <h3>📢 Promosi Layanan</h3>
+          <p>Memperkenalkan fasilitas perpustakaan kepada masyarakat.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- APRIL -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">April</h2>
+
+        <div class="activity">
+          <h3>📖 Pameran Buku</h3>
+          <p>Menampilkan koleksi terbaru perpustakaan.</p>
+        </div>
+
+        <div class="activity">
+          <h3>👥 Membaca Bersama</h3>
+          <p>Kegiatan membaca untuk meningkatkan budaya literasi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MEI -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Mei</h2>
+
+        <div class="activity">
+          <h3>🗃 Workshop Arsip</h3>
+          <p>Pelatihan pengelolaan dan penyimpanan arsip.</p>
+        </div>
+
+        <div class="activity">
+          <h3>📱 Pelatihan E-Book</h3>
+          <p>Mengajarkan penggunaan layanan digital perpustakaan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JUNI -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Juni</h2>
+
+        <div class="activity">
+          <h3>📊 Evaluasi Layanan</h3>
+          <p>Menilai kualitas pelayanan perpustakaan.</p>
+        </div>
+
+        <div class="activity">
+          <h3>🛠 Perawatan Buku</h3>
+          <p>Membersihkan dan memperbaiki koleksi yang rusak.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- JULI -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Juli</h2>
+
+        <div class="activity">
+          <h3>🎓 Orientasi Anggota</h3>
+          <p>Pengenalan fasilitas dan aturan perpustakaan.</p>
+        </div>
+
+        <div class="activity">
+          <h3>📚 Tata Tertib</h3>
+          <p>Sosialisasi penggunaan perpustakaan kepada anggota baru.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- AGUSTUS -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Agustus</h2>
+
+        <div class="activity">
+          <h3>⚡ Membaca Cepat</h3>
+          <p>Lomba membaca cepat untuk meningkatkan kemampuan literasi.</p>
+        </div>
+
+        <div class="activity">
+          <h3>🇮🇩 Hari Kemerdekaan</h3>
+          <p>Kegiatan bertema literasi dalam perayaan kemerdekaan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEPTEMBER -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1522205408450-add114ad53fe?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">September</h2>
+
+        <div class="activity">
+          <h3>📑 Katalogisasi</h3>
+          <p>Pelatihan penyusunan dan pengelompokan koleksi buku.</p>
+        </div>
+
+        <div class="activity">
+          <h3>🏫 Kunjungan Sekolah</h3>
+          <p>Mengenalkan perpustakaan kepada siswa sekolah.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- OKTOBER -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519682337058-a94d519337bc?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Oktober</h2>
+
+        <div class="activity">
+          <h3>❤️ Gemar Membaca</h3>
+          <p>Program untuk meningkatkan budaya membaca masyarakat.</p>
+        </div>
+
+        <div class="activity">
+          <h3>🎤 Talkshow Penulis</h3>
+          <p>Diskusi bersama penulis mengenai dunia literasi.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- NOVEMBER -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1526243741027-444d633d7365?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">November</h2>
+
+        <div class="activity">
+          <h3>📚 Buku Baru</h3>
+          <p>Penambahan koleksi buku sesuai kebutuhan pengunjung.</p>
+        </div>
+
+        <div class="activity">
+          <h3>📝 Survey Pengunjung</h3>
+          <p>Mengumpulkan kritik dan saran untuk peningkatan layanan.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DESEMBER -->
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?q=80&w=1200&auto=format&fit=crop">
+
+      <div class="content">
+        <h2 class="month">Desember</h2>
+
+        <div class="activity">
+          <h3>📄 Laporan Tahunan</h3>
+          <p>Menyusun laporan kegiatan perpustakaan selama satu tahun.</p>
+        </div>
+
+        <div class="activity">
+          <h3>✅ Evaluasi Program</h3>
+          <p>Menilai keberhasilan program dan membuat rencana baru.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © 2026 Digital Library | Library Activities
+  </footer>
+
+</body>
+</html> 
